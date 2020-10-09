@@ -49,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		backgroundColor: theme.palette.background.paper,
 	},
+	title: {
+		fontStyle: "normal",
+		fontWeight: "bold",
+		fontSize: "30px",
+		lineHeight: "35px",
+	},
 }));
 
 function TabPanel(props) {
@@ -121,27 +127,14 @@ function CombinedCalender() {
 							</div>
 						</Grid>
 						<Grid item xs={12} md={4} lg={3}>
-							<div
-								style={{
-									alignItems: "center",
-									position: "relative",
-									display: "flex",
-								}}>
-								<NotificationsIcon style={{ marginRight: "10px" }} />
-
-								<Modal />
-
-								<FlashOnIcon
-									style={{
-										backgroundColor: "black",
-										color: "#FFDD42",
-										width: "30px",
-										height: "30px",
-										borderRadius: "5px",
-										marginRight: "10px",
-									}}
-								/>
-							</div>
+							<Grid container spacing={2}>
+								<Grid item xs={12} md={7} lg={7}>
+									<Modal/>
+								</Grid>
+								<Grid item xs={12} md={5} lg={5}>
+									<CreateClassroom></CreateClassroom>
+								</Grid>
+							</Grid>
 					</Grid>
 					<div className={classes.root}>
 						<Grid container spacing={1}>

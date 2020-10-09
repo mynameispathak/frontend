@@ -5,7 +5,27 @@ import Button from "react-bootstrap/Button";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 
+import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from "@material-ui/core/MenuItem";
+
 import axios from "axios";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		minHeight: "70px",
+	},
+	formControl: {
+	  minWidth: 200,
+	  position: "absolute",
+	  marginTop: "10px",
+		left: "55%",
+	},
+	selectEmpty: {
+	},
+  }));
 
 export default function AddEventForm(props) {
 	const [eventName, setEventName] = useState("");
@@ -16,6 +36,13 @@ export default function AddEventForm(props) {
 	const [endTime, setEndTime] = useState("");
 	const [meetLink, setMeetLink] = useState("");
 	const [desc, setDesc] = useState("");
+
+	const classes = useStyles();
+	const [age, setAge] = React.useState(0);
+
+	const handleAgeChange = (event) => {
+		setAge(event.target.value);
+	};
 
 	// useEffect(() => {
 	//   props.sendData( {
@@ -41,7 +68,7 @@ export default function AddEventForm(props) {
 			"Authorization": `Bearer ${localStorage.getItem('ACCESS_TOKEN')}`
 		}
 		/*
-		to get a better idea of the params 
+		to get a better idea of the params
 		https://developer.goto.com/GoToMeetingV1/#operation/createMeeting
 		*/
 		const meetingData = {
@@ -107,21 +134,24 @@ export default function AddEventForm(props) {
 				/>
 			</Form.Group>
 			<Form.Row>
-				<Form.Group controlId='formGridEmail' style={{ marginRight: "20px" }}>
-					<Form.Label>Type</Form.Label>
-					<DropdownButton
-						id='dropdown-basic-button'
-						title='Add Type'
-						onSelect={(e) => setType(e)}>
-						<Dropdown.Item eventKey='Exam Date'>Exam Date</Dropdown.Item>
-						<Dropdown.Item eventKey='Submission Deadline'>
-							Submission Deadline
-						</Dropdown.Item>
-						<Dropdown.Item eventKey='Class Timing'>Class Timing</Dropdown.Item>
-						<Dropdown.Item eventKey='Holiday'>Holiday</Dropdown.Item>
-						<Dropdown.Item eventKey='Extra Class'>Extra Class</Dropdown.Item>
-						<Dropdown.Item eventKey='Others'>Others</Dropdown.Item>
-					</DropdownButton>
+				<Form.Group controlId='formGridEmail'>
+					<FormControl variant="outlined" className={classes.formControl}>
+						<InputLabel id="demo-simple-select-outlined-label">Type</InputLabel>
+						<Select
+							labelId="demo-simple-select-outlined-label"
+							id="demo-simple-select-outlined"
+							value={age}
+							onChange={handleAgeChange}
+							label="Type"
+						>
+							<MenuItem value="0">Exam Date</MenuItem>
+							<MenuItem value={"1"}>Submission Deadline</MenuItem>
+							<MenuItem value={2}>Class Timing</MenuItem>
+							<MenuItem value={3}>Holiday</MenuItem>
+							<MenuItem value={4}>Extra Class</MenuItem>
+							<MenuItem value={5}>Others</MenuItem>
+						</Select>
+					</FormControl>
 				</Form.Group>
 
 				<Form.Group controlId='formGridPassword'>
@@ -181,12 +211,13 @@ export default function AddEventForm(props) {
 			</Form.Group>
 			<button
 				style={{
-					backgroundColor: "#0080ff",
-					color: "white",
+					backgroundColor: "#FFDD42",
+					color: "black",
 					padding: "10px",
 					border: "0px solid white",
-					borderRadius: "5px",
+					borderRadius: "8px",
 					fontSize: "16px",
+					marginLeft: "80%"
 				}}
 				onClick={handleSubmit}>
 				Add Event
