@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: "bold",
 		fontSize: "30px",
 		lineHeight: "35px",
+		marginLeft: "1%",
 	},
 	paper: {
 		padding: theme.spacing(2),

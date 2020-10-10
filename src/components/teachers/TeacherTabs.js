@@ -15,10 +15,11 @@ import InputLabel from '@material-ui/core/InputLabel';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		minHeight: "70px",
+		marginLeft: "0.5%",
 	},
 	formControl: {
 	  minWidth: 120,
-	  position: "absolute", 
+	  position: "absolute",
 	  left: "70%",
 	  marginTop: "10px",
 	},

@@ -153,7 +153,7 @@ export default function CreateClassroom() {
 
 										textAlign: "center",
 									}}>
-								
+
 								</h2> */}
 								{/* </Link> */}
 							</Card>

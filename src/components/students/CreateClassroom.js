@@ -186,7 +186,6 @@ export default function CreateClassroom() {
 						onClick={handleClick("bottom-end")}
 						variant="contained"
 						style={{
-							marginLeft: "20px",
 							cursor: "pointer",
 						}}></OfflineBolt>
 				</Grid>

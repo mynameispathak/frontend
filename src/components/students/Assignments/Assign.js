@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(2),
 		textAlign: "center",
 		color: theme.palette.text.secondary,
-		marginLeft: "20px",
+		marginLeft: "1%",
 	},
 	root1: {
 		"& > * + *": {
@@ -148,7 +148,7 @@ function SubmissionContent() {
 	};
 
 	return (
-		<div style={{ marginRight: "5%" }}>
+		<div style={{ marginRight: "5%", marginTop: "5%", marginLeft: "1%" }}>
 			<div className={classes.root1}>
 				<Breadcrumbs
 					separator={<NavigateNextIcon fontSize="small" />}

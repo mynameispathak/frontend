@@ -111,7 +111,6 @@ function CombinedCalender() {
 	else displayedComponent = <h5 style={{ textAlign: 'center',}}>Please select a tab</h5>;
 	return (
 		<div>
-			<Container>
 				<Grid container spacing={3}>
 					<Grid item xs={12} md={8} lg={9}>
 						<div
@@ -119,7 +118,7 @@ function CombinedCalender() {
 								top: "6%",
 								display: "flex",
 								marginBottom: "2%",
-								marginLeft: "3%",
+								marginLeft: "1%",
 							}}>
 								<Typography variant="h2" gutterBottom className={classes.title}>
 									Calendar
@@ -137,8 +136,8 @@ function CombinedCalender() {
 							</Grid>
 						</Grid>
 					<div className={classes.root}>
-						<Grid container spacing={1}>
-							<Grid item xs={4} >
+						<Grid container spacing={4}>
+							<Grid item xs={2} style={{marginLeft: "1.5%"}}>
 								<div className={classes.root}>
 									<AppBar
 										position='static'
@@ -217,8 +216,9 @@ function CombinedCalender() {
 								</Paper>
 							</Grid>
 						</Grid>
-
-						<div style={{ marginTop: "10%" }}>{displayedComponent}</div>
+						<Container>
+							<div style={{ marginTop: "10%" }}>{displayedComponent}</div>
+						</Container>
 					</div>
 					{/* <Row>
 						<Col>
@@ -241,7 +241,6 @@ function CombinedCalender() {
 						</Col>
 					</Row> */}
 				</Grid>
-			</Container>
 		</div>
 	);
 }
