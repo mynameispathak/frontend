@@ -26,6 +26,7 @@ import Grid from "@material-ui/core/Grid";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
 import { Link } from "react-router-dom";
+import CreateClassroom from "../CreateClassroom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -48,6 +49,13 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		width: "100%",
 		backgroundColor: theme.palette.background.paper,
+	},
+	title: {
+		fontStyle: "normal",
+		fontWeight: "bold",
+		fontSize: "30px",
+		lineHeight: "35px",
+		marginLeft: "1%"
 	},
 }));
 
@@ -100,7 +108,6 @@ function CombinedCalender() {
 
 	return (
 		<div>
-			<Container>
 				<Grid container spacing={3}>
 					<Grid item xs={12} md={8} lg={9}>
 						<div
@@ -115,31 +122,18 @@ function CombinedCalender() {
 							</div>
 						</Grid>
 						<Grid item xs={12} md={4} lg={3}>
-							<div
-								style={{
-									alignItems: "left",
-									position: "relative",
-									display: "flex",
-								}}>
-								<NotificationsIcon style={{ marginRight: "10px" }} />
-
-								<Modal />
-
-								<FlashOnIcon
-									style={{
-										backgroundColor: "black",
-										color: "#FFDD42",
-										width: "30px",
-										height: "30px",
-										borderRadius: "5px",
-										marginRight: "10px",
-									}}
-								/>
-							</div>
+							<Grid container spacing={2}>
+								<Grid item xs={12} md={7} lg={7}>
+									<Modal/>
+								</Grid>
+								<Grid item xs={12} md={5} lg={5}>
+									<CreateClassroom></CreateClassroom>
+								</Grid>
+							</Grid>
 						</Grid>
 					<div className={classes.root}>
-						<Grid container spacing={2}>
-							<Grid item xs={4}>
+						<Grid container spacing={4}>
+							<Grid item xs={2} style={{ marginLeft: "1.5%"}}>
 								<div className={classes.root}>
 									<AppBar
 										position='static'
@@ -196,7 +190,6 @@ function CombinedCalender() {
 						</Col>
 					</Row> */}
 				</Grid>
-			</Container>
 		</div>
 	);
 }

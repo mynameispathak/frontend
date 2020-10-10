@@ -15,7 +15,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 import OfflineBoltIcon from "@material-ui/icons/OfflineBolt";
 import CoursesList from "../../components/teachers/Course/CourseList";
-import CreateClassroom from "../../components/students/CreateClassroom.js";
+import CreateClassroom from "../../components/teachers/CreateClassroom.js";
 import { Add } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: "bold",
 		fontSize: "30px",
 		lineHeight: "35px",
+		marginLeft: "1%",
 	},
 	paper: {
 		padding: theme.spacing(2),
@@ -60,7 +61,7 @@ export default function CoursePage() {
 			<Grid item xs={12} md={3} lg={3}>
 				<CreateClassroom style={{ textAlign: "right" }} />
 			</Grid>
-			<Typography style={{ marginLeft: "2%", marginTop: "5px" }}>
+			<Typography style={{ marginLeft: "1.5%", marginTop: "5px" }}>
 				Sort By:{" "}
 			</Typography>
 			<DropdownButton
@@ -92,7 +93,7 @@ export default function CoursePage() {
 			<Grid
 				container
 				spacing={2}
-				style={{ marginLeft: "2%", marginRight: "5%", marginTop: "5%" }}>
+				style={{ marginLeft: "1%", marginRight: "5%", marginTop: "5%" }}>
 				<Grid item xs={12} sm={6} md={4} style={{ marginBottom: "1%" }}>
 					<CoursesList />
 				</Grid>
