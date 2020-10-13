@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
 		width: "15px",
 		height: "20px",
 		marginLeft: "10px",
-		paddingTop: "5px",
 	},
 
 	paper: {
@@ -47,10 +46,7 @@ const useStyles = makeStyles((theme) => ({
 		boxShadow: "none",
 		background: "rgba(246, 248, 249, 0.5)",
 		borderRadius: "8px",
-		paddingTop: "2px",
-		paddingLeft: theme.spacing(1),
-		paddingRight: theme.spacing(1),
-		paddingBottom: theme.spacing(1),
+		padding: theme.spacing(1),
 	},
 	paper1: {
 		backgroundColor: theme.palette.background.paper,
@@ -91,7 +87,7 @@ function TransitionsModal() {
 	return (
 		<div>
 			<a onClick={handleOpen}>
-				Upload
+				Submit
 			</a>
 			<Modal
 				aria-labelledby="transition-modal-title"
@@ -106,9 +102,9 @@ function TransitionsModal() {
 				}}>
 				<Fade in={open}>
 					<div className={classes.paper1}>
-						<h2 id="transition-modal-title">Upload Assignment</h2>
+						<h2 id="transition-modal-title" style={{ marginTop: "5%"}}>Upload Assignment</h2>
 
-						<h3 id="transition-modal-description">Assignment 1</h3>
+						<h3 id="transition-modal-description" style={{ margin: "2%"}}>Assignment 1</h3>
 						<h4 className="topicname">Demo Assignment Name 1</h4>
 						<p id="descriptionArea">
 							Topic Tags:
@@ -179,15 +175,28 @@ function TransitionsModal() {
 								</Grid>
 							</Grid>
 						</div>
-						<Box width="100%" height="auto" id="Drag">
-							{upload.map((upload) => {})}
-							<CloudArrowUpFill
-								color="black"
-								size={30}
-								className="UploadIcon"
-							/>
-							Drag and Drop files or Upload
-						</Box>
+						<label style={{ width: "100%" }} for="file_upload">
+							<Box
+								style={{ cursor: "pointer" }}
+								width="100%"
+								height="auto"
+								id="Drag">
+								{upload.map((upload) => {})}
+								<CloudArrowUpFill
+									color="black"
+									size={30}
+								/>
+								Drag and Drop files or Upload
+								<input
+									style={{ display: "none" }}
+									type="file"
+									id="file_upload"
+									className="inputFile"
+									name="file_upload"
+									onDrop={(e) => this.props.onChangeHandler(e)}
+								/>
+							</Box>
+						</label>
 
 						<div id="footer">
 							{/*<Button variant="contained" id="back-btn">
@@ -198,7 +207,7 @@ function TransitionsModal() {
 								<Button
 									onClick={handleClose}
 									variant="contained"
-									color="warning"									
+									color="warning"
 									style={{backgroundColor: "#F8F8F8"}}
 									id="space"
 									>

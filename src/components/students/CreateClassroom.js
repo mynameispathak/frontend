@@ -63,6 +63,7 @@ export default function CreateClassroom() {
 		padding: "10px  2px 2px",
 		width: "80px",
 		color: "grey",
+		height: "90px"
 	};
 	return (
 		<div className={classes.root}>
@@ -78,7 +79,7 @@ export default function CreateClassroom() {
 								boxShadow:
 									"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034)",
 							}}>
-							<Card className={classes.hoverstyle}>
+							{/*<Card className={classes.hoverstyle}>
 								<BookIcon style={customStyle} />
 								<p
 									style={{
@@ -90,64 +91,7 @@ export default function CreateClassroom() {
 									}}>
 									<TopicsDataGrid />
 								</p>
-							</Card>
-							<Card className={classes.hoverstyle}>
-								<AssignmentIcon style={customStyle} />
-								<p
-									style={{
-										fontSize: "12px",
-										marginLeft: "5px",
-										textAlign: "center",
-										color: "blue",
-										cursor: "pointer",
-									}}>
-									<ModalForm />
-								</p>
-							</Card>
-							<Card className={classes.hoverstyle}>
-								<LaptopChromebookIcon style={customStyle} />
-								<h2
-									style={{
-										fontSize: "12px",
-
-										textAlign: "center",
-									}}>
-									+ Meeting
-								</h2>
-							</Card>
-
-							<Card className={classes.hoverstyle}>
-								{/* <Link to="/page3" style={{ color: "black" }}> */}
-								<PostAdd style={customStyle} />
-
-								<h2
-									style={{
-										fontSize: "12px",
-
-										textAlign: "center",
-										color: "blue",
-										cursor: "pointer",
-									}}>
-									<ViewStudy />
-								</h2>
-								{/* </Link> */}
-							</Card>
-
-							<Card className={classes.hoverstyle}>
-								{/* <Link to="/student/assignment"> */}
-								<HelpOutlineIcon style={customStyle} />
-								<p
-									style={{
-										fontSize: "12px",
-
-										textAlign: "center",
-										color: "blue",
-										cursor: "pointer",
-									}}>
-									<QuizModal />
-								</p>
-								{/* </Link> */}
-							</Card>
+							</Card>*/}
 							<Card className={classes.hoverstyle}>
 								<Link
 									to="/student/perform"
@@ -167,6 +111,73 @@ export default function CreateClassroom() {
 									</h2>
 								</Link>
 							</Card>
+
+							<Card className={classes.hoverstyle}>
+								<AssignmentIcon style={customStyle} />
+								<p
+									style={{
+										fontSize: "12px",
+										marginLeft: "5px",
+										textAlign: "center",
+										color: "blue",
+										cursor: "pointer",
+									}}>
+									<ModalForm />
+								</p>
+							</Card>
+
+							<Card className={classes.hoverstyle}>
+								<LaptopChromebookIcon style={customStyle} />
+								<h2
+									style={{
+										fontSize: "12px",
+
+										textAlign: "center",
+									}}>
+									Take <br></br> a Quiz
+								</h2>
+							</Card>
+
+							{/*<Card className={classes.hoverstyle}>
+								<LaptopChromebookIcon style={customStyle} />
+								<h2
+									style={{
+										fontSize: "12px",
+
+										textAlign: "center",
+									}}>
+									+ Meeting
+								</h2>
+							</Card>*/}
+
+							{/*<Card className={classes.hoverstyle}>
+								<PostAdd style={customStyle} />
+
+								<h2
+									style={{
+										fontSize: "12px",
+
+										textAlign: "center",
+										color: "blue",
+										cursor: "pointer",
+									}}>
+									<ViewStudy />
+								</h2>
+							</Card> */}
+
+							{/*<Card className={classes.hoverstyle}>
+								<HelpOutlineIcon style={customStyle} />
+								<p
+									style={{
+										fontSize: "12px",
+
+										textAlign: "center",
+										color: "blue",
+										cursor: "pointer",
+									}}>
+									<QuizModal />
+								</p>
+							</Card>*/}
 						</Paper>
 					</Fade>
 				)}

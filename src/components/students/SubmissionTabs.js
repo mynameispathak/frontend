@@ -17,6 +17,7 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import ModalForm from "./ModalForm";
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
 
@@ -112,7 +113,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
@@ -134,7 +135,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
@@ -156,7 +157,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
@@ -178,7 +179,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
@@ -210,7 +211,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
@@ -232,7 +233,7 @@ export default function SubmissionTabs() {
 							variant="contained"
 							style={{ backgroundColor: "gold", marginRight: "10px" }}
 							disableElevation>
-							Submit Now
+							<ModalForm />
 						</Button>
 						<MoreVertIcon />
 					</ListItem>
