@@ -13,6 +13,8 @@ import TopicsPage from "./components/parents/TopicsPage";
 import Announcements from "./components/parents/Announcements";
 import Messenger from "./components/parents/Messenger";
 
+import CombinedCalender from "./components/parents/Calendar/Combined";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -110,6 +112,9 @@ export default function AppParent() {
 						</Route>
 						<Route exact path="/parent/messages">
 							<Messenger />
+						</Route>
+						<Route exact path="/parent/calendar">
+							<CombinedCalender />
 						</Route>
 					</Switch>
 				</Container>
