@@ -1,0 +1,43 @@
+{
+  "name": "teacher-student_portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server-start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMS2020123/frontend.git"
+  },
+  "author": "Pankaj Sunal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LMS2020123/frontend/issues"
+  },
+  "homepage": "https://github.com/LMS2020123/frontend#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.1",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.16.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-timeout-handler": "^2.2.0",
+    "file-stream-rotator": "^0.5.7",
+    "helmet": "^4.1.1",
+    "lusca": "^1.6.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "serve-favicon": "^2.5.0"
+  }
+}
