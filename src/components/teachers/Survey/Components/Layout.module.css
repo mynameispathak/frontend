@@ -1,0 +1,40 @@
+.Layout__Header {
+  border-bottom: 1px solid lightgray;
+}
+.Layout__Header__Heading {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+.Layout__Header__NavBar {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Layout__Header__NavTab {
+  text-decoration: none;
+  color: black;
+  margin: 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid black;
+
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.Layout__Header__NavTab__Active {
+  text-decoration: none;
+  color: black;
+  color: grey;
+  border-bottom: 2px solid black;
+}
+
+.Layout__Main {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.2);
+}

@@ -23,6 +23,8 @@ import { CloudArrowUpFill, XCircleFill } from "react-bootstrap-icons";
 import axios from "axios";
 import { Add } from "@material-ui/icons";
 import ChipInput from "material-ui-chip-input";
+import Survey from "./Survey/Survey"
+
 const useStyles = makeStyles((theme) => ({
 	modal: {
 		display: "flex",
@@ -238,7 +240,7 @@ function TransitionsModal() {
 							</Grid>
 						</div>
 
-						<label style={{ width: "100%" }} for="file_upload">
+						{/*<label style={{ width: "100%" }} for="file_upload">
 							<Box
 								style={{ cursor: "pointer" }}
 								width="100%"
@@ -260,20 +262,11 @@ function TransitionsModal() {
 									onDrop={(e) => this.props.onChangeHandler(e)}
 								/>
 							</Box>
-						</label>
+						</label>*/}
 
 						<div className={classes.footer}>
 							<Grid container justify="flex-start" spacing={0}>
-								<Grid item xs={3}>
-									<Button
-										variant="contained"
-										id="back-btn"
-										onClick={handleClose}>
-										<img src={back} alt=""></img>
-										BACK
-									</Button>
-								</Grid>
-								<Grid item xs={9}>
+								<Grid item xs={12}>
 									<Grid container justify="flex-end" spacing={0}>
 										<Grid item>
 											<Button
@@ -285,13 +278,7 @@ function TransitionsModal() {
 											</Button>
 										</Grid>
 										<Grid item>
-											<Button
-												variant="contained"
-												color="primary"
-												style={{ backgroundColor: "#FFD300" }}
-												onClick={handleClose}>
-												Create
-											</Button>
+											<Survey />
 										</Grid>
 									</Grid>
 								</Grid>

@@ -1,0 +1,18 @@
+.MultipleChoice input {
+  border: none;
+
+  box-sizing: border-box;
+  margin: 1rem;
+
+  width: 95%;
+}
+
+.MultipleChoice input:hover:not(:focus) {
+  border-bottom: 1px solid grey;
+}
+
+.MultipleChoiceinput:focus{
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #673ab7;
+}

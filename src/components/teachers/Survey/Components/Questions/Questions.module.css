@@ -1,0 +1,94 @@
+.Questions {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.QuestionsHeader {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 1rem;
+  border-top: 4px solid black;
+  margin: 0rem auto;
+}
+
+.QuestionsHeader:hover {
+  border-left: 4px solid grey;
+}
+
+.QuestionsHeader__title {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.QuestionsHeader__description {
+  margin: 1rem;
+  color: gray;
+  overflow-wrap: break-word;
+}
+.QuizControl__Actions{
+  padding:1rem; 
+  background-color: #e9e6e6;
+}
+
+input.titleInput {
+  border: none;
+  box-sizing: border-box;
+  font-size: 2rem;
+  margin: 1rem;
+  width: 95%;
+  border-bottom: 1px solid grey;
+}
+
+input.descriptionInput {
+  border: none;
+
+  box-sizing: border-box;
+  margin: 1rem;
+  border-bottom: 1px solid grey;
+  width: 95%;
+}
+
+.Questions input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.AddQuestionBtn {
+  position: fixed;
+  right: 1%;
+  top:3%;
+  text-align:center;
+  transform:translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.AddQuestionBtn:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1100px) {
+  .Questions {
+    width: 70%;
+  }
+ 
+}
+
+.plusIcon {
+  padding: 0rem 0.4rem;
+  color: gray;
+  text-align: center;
+}
+
+.plusIcon:hover {
+  cursor: pointer;
+}

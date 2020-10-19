@@ -1,0 +1,62 @@
+.Question {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow:0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 1rem;
+  border-top: 4px solid black;
+  margin: 1rem auto;
+}
+.Question:hover {
+    border-left: 4px solid grey;
+  }
+.QuestionInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.QuestionInfo input{
+    width: 70%;
+    padding: 1rem;
+    border: none;
+    border-bottom:1px solid gray;
+    box-sizing: border-box;
+}
+
+.QuestionInfo select{
+    padding: 1rem;
+}
+
+@media screen and (max-width:800px){
+    .QuestionInfo input{
+        width: 100%;
+    }
+    .QuestionInfo select{
+        width:100%;
+    }
+}
+
+.TypeOfQuestion hr{
+    width: 80%;
+    margin: 1rem auto;
+    color: #cccccc;
+
+}
+
+.Actions{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.Actions1{
+    margin: 0rem 1rem;
+}
+
+.op {
+    padding: 1em;
+    border:1px black solid;
+}

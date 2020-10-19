@@ -32,6 +32,7 @@
 		"react-scripts": "^3.4.2",
 		"react-swipeable-views": "^0.13.9",
 		"recharts": "^1.8.5",
+		"shortid": "^2.2.15",
 		"simple-react-calendar": "^2.2.7"
 	},
 	"scripts": {
